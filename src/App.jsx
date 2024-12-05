@@ -16,6 +16,9 @@ function App() {
           <h1 className="text-4xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
             Welcome to My Vite React App!
           </h1>
+          <div>
+            <img src={"/Users/rizon/Desktop/6th_IIT/6th_Semester/Distribution/welcome/src/assets/cat.jpeg"}></img>
+          </div>
           <div className="space-y-3">
             {[
               "Simple app deployed on Vercel",
