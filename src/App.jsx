@@ -6,6 +6,7 @@ function App() {
     <div className="App">
       <h1>Welcome to My Vite React App!</h1>
       <p>This is a simple app deployed on Vercel with CI/CD using GitHub Actions.</p>
+      <P>New changegit</P>
     </div>
   );
 }
