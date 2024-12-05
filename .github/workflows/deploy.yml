@@ -28,6 +28,6 @@ jobs:
 
       - name: Deploy to Vercel
         uses: amondnet/vercel-action@v20
-        # with:
-        #   vercel_token: ${{ secrets.VERCEL_TOKEN }}
-        #   vercel_project_name: <your-vercel-project-name>
+        with:
+          vercel_token: ${{ secrets.VERCEL_TOKEN }} # Vercel token stored in GitHub Secrets
+          vercel_project_name: ci-cd     # Replace with your actual Vercel project name
