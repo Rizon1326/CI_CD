@@ -1,33 +1,71 @@
-name: Vite React CI/CD
+name: Build and Test Workflow
 
 on:
   push:
     branches:
-      - main
+      - main  # Triggers on pushes to the main branch
+
   pull_request:
     branches:
-      - main
+      - main  # Triggers on pull requests targeting the main branch
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - name: Checkout Repository
+        uses: actions/checkout@v3
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
-          node-version: '18.x'
+          node-version: 18
 
-      - name: Install dependencies
+      - name: Install Dependencies
         run: npm install
 
-      - name: Build the app
+      - name: Run Tests
+        run: npm test # Optional, skip this if you don't have tests
+
+      - name: Build Project
         run: npm run build
 
-      - name: Deploy to Vercel
-        uses: amondnet/vercel-action@v20
-        with:
-          vercel_token: ${{ secrets.VERCEL_TOKEN }} # Vercel token stored in GitHub Secrets
-          vercel_project_name: ci-cd     # Replace with your actual Vercel project name
+
+
+
+
+#------
+# name: Vite React CI/CD
+
+# on:
+#   push:
+#     branches:
+#       - main
+#   pull_request:
+#     branches:
+#       - main
+
+# jobs:
+#   deploy:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v2
+
+#       - name: Set up Node.js
+#         uses: actions/setup-node@v2
+#         with:
+#           node-version: '18.x'
+
+#       - name: Install dependencies
+#         run: npm install
+
+#       - name: Build the app
+#         run: npm run build
+
+#       - name: Deploy to Vercel
+#         uses: amondnet/vercel-action@v20
+#         with:
+#           vercel_token: ${{ secrets.VERCEL_TOKEN }} # Vercel token stored in GitHub Secrets
+#           vercel_project_name: ci-cd     # Replace with your actual Vercel project name
