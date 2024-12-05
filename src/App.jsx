@@ -21,10 +21,10 @@ function App() {
           </div>
           <div className="space-y-3">
             {[
+              "Hello!! I am Rizon",
+              "Wellcome to my CI/CD implementation Using GitAction and Vercel",
               "Simple app deployed on Vercel",
-              "Powered by CI/CD with GitHub Actions",
-              "Seamless development experience",
-              "Modern React with Vite"
+              "Powered by CI/CD with GitHub Actions"
             ].map((text, index) => (
               <p 
                 key={index} 
