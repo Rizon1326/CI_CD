@@ -8,6 +8,7 @@ function App() {
       <p>This is a simple app deployed on Vercel with CI/CD using GitHub Actions.</p>
       <p>New change git</p>
       <p>Another change git</p>
+      <p>Another new change to git</p>
     </div>
   );
 }
